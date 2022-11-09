@@ -275,7 +275,8 @@ Aconselhavel usar a heuristica VADER
         <th colspan="4">
             A - Autenticação
         </th>
-         <th>
+        <tr>
+       <th>
   Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
 
  - Basic: credenciais codificadas em base64.
@@ -289,6 +290,7 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
  - Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
  - Restrições de acesso assim que for autorizado.
         </th>
+    </tr>
         <th>
             D - Dados
         </th>
@@ -310,9 +312,7 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
         </th>
     </tr>
     <tr>
-    <tr>
-       
-    </tr>
+   
     <tr>
     <tr>
         <th>
