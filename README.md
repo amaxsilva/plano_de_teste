@@ -285,7 +285,7 @@ Verbos HTTP são comumente também conhecidos como métodos HTTP, essa parte con
  DELETE: Usado para excluir dados e pode possuir corpo para envio, mas normalmente é usado no próprio path da url com o identificador.
         </td>
         <td>
-  Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
+ Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
 
  Basic: credenciais codificadas em base64.
  Bearer: tokens bearer para acessar recursos protegidos por OAuth 2.0.
