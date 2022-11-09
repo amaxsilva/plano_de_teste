@@ -294,9 +294,6 @@ Aconselhavel usar a heuristica VADER
  - PUT: Usado para atualizar dados, pode possuir corpo, mas normalmente é usado no próprio path da url, que é o caminho para o identificador do recurso e a resposta bem sucedida pode ter corpo.
  - DELETE: Usado para excluir dados e pode possuir corpo para envio, mas normalmente é usado no próprio path da url com o identificador.
         </th>
-    </tr>
-    <tr>
-    <tr>
         <th>
   Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
 
@@ -311,9 +308,6 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
  - Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
  - Restrições de acesso assim que for autorizado.
         </th>
-    </tr>
-    <tr>
-    <tr>
         <th>
     Nesta parte, olhamos para os dados que trafegam na API, sendo um payload de envio ou resposta de um endpoint. Neste momento podemos realizar alguns testes:
 
@@ -322,9 +316,6 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
  - Formato: Validar o tipo de retorno esperado pela API, os mais comuns são application/json e application/xml.
  - Tamanho: Validar o tamanho do envio e retorno da api, para não afetar ao tempo de resposta do endpoint.
         </th>
-    </tr>
-    <tr>
-    <tr>
         <th>
     Aqui, avaliamos minuciosamente o códigos de resposta para cada erro e suas respectivas mensagens, também podemos incluir padrões de excessões para cada erros. Abaixo detalhamos os principais códigos de erros:
 
@@ -335,9 +326,6 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
  - 503 Service Unavailable: quando o servidor se encontra em manutenção ou sobrecarregado.
 * Nota importante: Definir com a equipe de desenvolvimento os padrões de retornos para os erros com mensagens e exceções, também definir quando acontece cada erro. Tenho sempre o costume de utilizar uma tabela DE/PARA em um excel para definir, excessão X deve ser o retorno Y.
         </th>
-    </tr>
-    <tr>
-    <tr>
         <th>
     Nesta última etapa cuidamos de tudo que retorna em nossos serviços. Aqui podemos adicionar métricas de estrutura do seu projeto, que podem ser: Uso do CPU, Uptime dos serviços, Uso de memória da aplicação, capacidade de requisições por minutos e latência dos serviços, no qual pode ser encontrado em testes de carga e performance. Mas também podemos utilizar outro visão de análise que são as seguintes:
 
@@ -346,7 +334,6 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
 Concorrência: A realização de requisições em sequência ou ao mesmo tempo, afim de avaliar a carga que pode ser aplicada ao servidor.
         </th>
     </tr>
-    <tr>    
 </table>
 <br/>
 
