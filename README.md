@@ -269,32 +269,22 @@ Aconselhavel usar a heuristica VADER
 <br/>
 <table>
     <tr>
-        <th>
-            V - Verbos
-        </th>
-        <th colspan="4">
-            A - Autenticação
-        </th>
-        <th>
-            D - Dados
-        </th>
-        <th>
-            E - Erros
-        </th>
-        <th>
-            R - Responsividade
-        </th>
+        <td>V - Verbos</td>
+        <td>A - Autenticação</td>
+        <td>D - Dados</td>
+        <td>E - Erros</td>
+        <td>R - Responsividade</td>
     </tr>
     <tr>
-        <th>
+        <td>
   Verbos HTTP são comumente também conhecidos como métodos HTTP, essa parte consiste em testar os verbos aptos e não aptos para o endpoint. Coloco abaixo uma descrição básica dos principais verbos/métodos:
 
  - GET: Serve para buscar dados, pode ser cacheado e nunca deve ser usado com dados sensíveis.
  - POST: Pode criar e atualizar dados, possui um corpo/payload e preferencialmente não deve ter cache.
  - PUT: Usado para atualizar dados, pode possuir corpo, mas normalmente é usado no próprio path da url, que é o caminho para o identificador do recurso e a resposta bem sucedida pode ter corpo.
  - DELETE: Usado para excluir dados e pode possuir corpo para envio, mas normalmente é usado no próprio path da url com o identificador.
-        </th>
-        <th>
+        </td>
+        <td>
   Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
 
  - Basic: credenciais codificadas em base64.
@@ -307,16 +297,16 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
  - Validar o não uso de Token, API Key ou Usuário e senha exposta na URL.
  - Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
  - Restrições de acesso assim que for autorizado.
-        </th>
-        <th>
+        </td>
+        <td>
     Nesta parte, olhamos para os dados que trafegam na API, sendo um payload de envio ou resposta de um endpoint. Neste momento podemos realizar alguns testes:
 
  - Tipagem: validação dos tipos do payload de envio e resposta com base na documentação
  - Paginação: Validar referencias para página anterior e seguinte, assim como a contagem de itens quando for um array.
  - Formato: Validar o tipo de retorno esperado pela API, os mais comuns são application/json e application/xml.
  - Tamanho: Validar o tamanho do envio e retorno da api, para não afetar ao tempo de resposta do endpoint.
-        </th>
-        <th>
+        </td>
+        <td>
     Aqui, avaliamos minuciosamente o códigos de resposta para cada erro e suas respectivas mensagens, também podemos incluir padrões de excessões para cada erros. Abaixo detalhamos os principais códigos de erros:
 
  - 400 Bad Request: servidor não entendeu a requisição feita,
@@ -325,14 +315,14 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
  - 500 Internal Server Error: Erro genérico para quando o servidor encontrou algo em que ele não sabe lidar.
  - 503 Service Unavailable: quando o servidor se encontra em manutenção ou sobrecarregado.
 * Nota importante: Definir com a equipe de desenvolvimento os padrões de retornos para os erros com mensagens e exceções, também definir quando acontece cada erro. Tenho sempre o costume de utilizar uma tabela DE/PARA em um excel para definir, excessão X deve ser o retorno Y.
-        </th>
-        <th>
+        </td>
+        <td>
     Nesta última etapa cuidamos de tudo que retorna em nossos serviços. Aqui podemos adicionar métricas de estrutura do seu projeto, que podem ser: Uso do CPU, Uptime dos serviços, Uso de memória da aplicação, capacidade de requisições por minutos e latência dos serviços, no qual pode ser encontrado em testes de carga e performance. Mas também podemos utilizar outro visão de análise que são as seguintes:
 
  - Tempo de resposta: Dada as ações que o endpoint pode realizar, analisar o tempo de resposta para essas ações e criar um padrão para o projeto.
  - Falha rápida (fail fast): É o conceito de interromper uma operação ao invés de tentar continuar ou executar as etapas seguintes do endpoint.
-Concorrência: A realização de requisições em sequência ou ao mesmo tempo, afim de avaliar a carga que pode ser aplicada ao servidor.
-        </th>
+ - Concorrência: A realização de requisições em sequência ou ao mesmo tempo, afim de avaliar a carga que pode ser aplicada ao servidor.
+        </td>
     </tr>
 </table>
 <br/>
