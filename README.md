@@ -277,51 +277,51 @@ Aconselhavel usar a heuristica VADER
     </tr>
     <tr>
         <td>
-  Verbos HTTP são comumente também conhecidos como métodos HTTP, essa parte consiste em testar os verbos aptos e não aptos para o endpoint. Coloco abaixo uma descrição básica dos principais verbos/métodos:
+Verbos HTTP são comumente também conhecidos como métodos HTTP, essa parte consiste em testar os verbos aptos e não aptos para o endpoint. Coloco abaixo uma descrição básica dos principais verbos/métodos:
 
- - GET: Serve para buscar dados, pode ser cacheado e nunca deve ser usado com dados sensíveis.
- - POST: Pode criar e atualizar dados, possui um corpo/payload e preferencialmente não deve ter cache.
- - PUT: Usado para atualizar dados, pode possuir corpo, mas normalmente é usado no próprio path da url, que é o caminho para o identificador do recurso e a resposta bem sucedida pode ter corpo.
- - DELETE: Usado para excluir dados e pode possuir corpo para envio, mas normalmente é usado no próprio path da url com o identificador.
+ GET: Serve para buscar dados, pode ser cacheado e nunca deve ser usado com dados sensíveis.
+ POST: Pode criar e atualizar dados, possui um corpo/payload e preferencialmente não deve ter cache.
+ PUT: Usado para atualizar dados, pode possuir corpo, mas normalmente é usado no próprio path da url, que é o caminho para o identificador do recurso e a resposta bem sucedida pode ter corpo.
+ DELETE: Usado para excluir dados e pode possuir corpo para envio, mas normalmente é usado no próprio path da url com o identificador.
         </td>
         <td>
   Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
 
- - Basic: credenciais codificadas em base64.
- - Bearer: tokens bearer para acessar recursos protegidos por OAuth 2.0.
+ Basic: credenciais codificadas em base64.
+ Bearer: tokens bearer para acessar recursos protegidos por OAuth 2.0.
 
 Após isso, você pode realizar alguns cenários de testes utilizando alguns pontos:
 
- - Validar Token (Tipo de criptografia utilizar e testes de segurança).
- - Quais os recursos a API Key deve acessar.
- - Validar o não uso de Token, API Key ou Usuário e senha exposta na URL.
- - Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
- - Restrições de acesso assim que for autorizado.
+ Validar Token (Tipo de criptografia utilizar e testes de segurança).
+ Quais os recursos a API Key deve acessar.
+ Validar o não uso de Token, API Key ou Usuário e senha exposta na URL.
+ Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
+ Restrições de acesso assim que for autorizado.
         </td>
         <td>
     Nesta parte, olhamos para os dados que trafegam na API, sendo um payload de envio ou resposta de um endpoint. Neste momento podemos realizar alguns testes:
 
- - Tipagem: validação dos tipos do payload de envio e resposta com base na documentação
- - Paginação: Validar referencias para página anterior e seguinte, assim como a contagem de itens quando for um array.
- - Formato: Validar o tipo de retorno esperado pela API, os mais comuns são application/json e application/xml.
- - Tamanho: Validar o tamanho do envio e retorno da api, para não afetar ao tempo de resposta do endpoint.
+ Tipagem: validação dos tipos do payload de envio e resposta com base na documentação
+ Paginação: Validar referencias para página anterior e seguinte, assim como a contagem de itens quando for um array.
+ Formato: Validar o tipo de retorno esperado pela API, os mais comuns são application/json e application/xml.
+ Tamanho: Validar o tamanho do envio e retorno da api, para não afetar ao tempo de resposta do endpoint.
         </td>
         <td>
     Aqui, avaliamos minuciosamente o códigos de resposta para cada erro e suas respectivas mensagens, também podemos incluir padrões de excessões para cada erros. Abaixo detalhamos os principais códigos de erros:
 
- - 400 Bad Request: servidor não entendeu a requisição feita,
- - 403 Forbidden: proibido o acesso em um determinado recurso.
- - 404 Not found: Servidor não encontrou o recurso solicitado.
- - 500 Internal Server Error: Erro genérico para quando o servidor encontrou algo em que ele não sabe lidar.
- - 503 Service Unavailable: quando o servidor se encontra em manutenção ou sobrecarregado.
+ 400 Bad Request: servidor não entendeu a requisição feita,
+ 403 Forbidden: proibido o acesso em um determinado recurso.
+ 404 Not found: Servidor não encontrou o recurso solicitado.
+ 500 Internal Server Error: Erro genérico para quando o servidor encontrou algo em que ele não sabe lidar.
+ 503 Service Unavailable: quando o servidor se encontra em manutenção ou sobrecarregado.
 * Nota importante: Definir com a equipe de desenvolvimento os padrões de retornos para os erros com mensagens e exceções, também definir quando acontece cada erro. Tenho sempre o costume de utilizar uma tabela DE/PARA em um excel para definir, excessão X deve ser o retorno Y.
         </td>
         <td>
     Nesta última etapa cuidamos de tudo que retorna em nossos serviços. Aqui podemos adicionar métricas de estrutura do seu projeto, que podem ser: Uso do CPU, Uptime dos serviços, Uso de memória da aplicação, capacidade de requisições por minutos e latência dos serviços, no qual pode ser encontrado em testes de carga e performance. Mas também podemos utilizar outro visão de análise que são as seguintes:
 
- - Tempo de resposta: Dada as ações que o endpoint pode realizar, analisar o tempo de resposta para essas ações e criar um padrão para o projeto.
- - Falha rápida (fail fast): É o conceito de interromper uma operação ao invés de tentar continuar ou executar as etapas seguintes do endpoint.
- - Concorrência: A realização de requisições em sequência ou ao mesmo tempo, afim de avaliar a carga que pode ser aplicada ao servidor.
+ Tempo de resposta: Dada as ações que o endpoint pode realizar, analisar o tempo de resposta para essas ações e criar um padrão para o projeto.
+ Falha rápida (fail fast): É o conceito de interromper uma operação ao invés de tentar continuar ou executar as etapas seguintes do endpoint.
+ Concorrência: A realização de requisições em sequência ou ao mesmo tempo, afim de avaliar a carga que pode ser aplicada ao servidor.
         </td>
     </tr>
 </table>
