@@ -275,22 +275,6 @@ Aconselhavel usar a heuristica VADER
         <th colspan="4">
             A - Autenticação
         </th>
-        <tr>
-       <th>
-  Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
-
- - Basic: credenciais codificadas em base64.
- - Bearer: tokens bearer para acessar recursos protegidos por OAuth 2.0.
-
-Após isso, você pode realizar alguns cenários de testes utilizando alguns pontos:
-
- - Validar Token (Tipo de criptografia utilizar e testes de segurança).
- - Quais os recursos a API Key deve acessar.
- - Validar o não uso de Token, API Key ou Usuário e senha exposta na URL.
- - Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
- - Restrições de acesso assim que for autorizado.
-        </th>
-    </tr>
         <th>
             D - Dados
         </th>
@@ -312,7 +296,22 @@ Após isso, você pode realizar alguns cenários de testes utilizando alguns pon
         </th>
     </tr>
     <tr>
-   
+    <tr>
+        <th>
+  Nesta etapa tudo se volta para o tipo de autorização que você utiliza, assim você vai saber quais os pontos que você tem que tomar cuidado, basicamente existem dois tipos mais populares de autorização que são:
+
+ - Basic: credenciais codificadas em base64.
+ - Bearer: tokens bearer para acessar recursos protegidos por OAuth 2.0.
+
+Após isso, você pode realizar alguns cenários de testes utilizando alguns pontos:
+
+ - Validar Token (Tipo de criptografia utilizar e testes de segurança).
+ - Quais os recursos a API Key deve acessar.
+ - Validar o não uso de Token, API Key ou Usuário e senha exposta na URL.
+ - Testes de Token, API Key ou Usuário e senha inválido ou inexistentes.
+ - Restrições de acesso assim que for autorizado.
+        </th>
+    </tr>
     <tr>
     <tr>
         <th>
